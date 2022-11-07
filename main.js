@@ -39,7 +39,7 @@ function createCard(user) {
                         <p>${location}</p>
                     </div>
                 </div>
-                <div class="profile-btn"><a href="https://github.com/${login}">Visit Profile</a>Visit Profile</a></div>
+                <div class="profile-btn"><a href="https://github.com/${login}">Visit Profile</a></div>
             </section>
             <section class="sec-container">
                 <div class="sec-about">
