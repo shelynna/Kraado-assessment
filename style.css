@@ -97,7 +97,7 @@ input:focus {
 		display: flex;
 		flex-direction: column;
 	}
-	.profile-btn button {
+	.profile-btn a {
 		width: 100%;
 		padding: 1rem 2rem;
 		border-radius: 5px;
@@ -105,31 +105,31 @@ input:focus {
 	}
 }
 .repos {
-    width: 800px;
-    position: absolute;
-    text-align: center;
-    min-height: 100px;
-    overflow: auto;
-    background-color: rgb(10, 27, 27);
-    padding: 1rem;
-    border-radius: 20px;
-    margin: 1rem;
+	width: 800px;
+	position: absolute;
+	text-align: center;
+	min-height: 100px;
+	overflow: auto;
+	background-color: rgb(10, 27, 27);
+	padding: 1rem;
+	border-radius: 20px;
+	margin: 1rem;
 }
 
 .repos h1 {
-    color: white;
+	color: white;
 }
 
 .repo {
-    display: inline-block;
-    color: rgb(211, 210, 208);
-    text-decoration: none;
-    padding: 0.3rem;
-    background-color: rgba(0, 139, 139, 0.432);
-    margin: 0.5rem;
-    border-radius: 0.5rem;
+	display: inline-block;
+	color: rgb(211, 210, 208);
+	text-decoration: none;
+	padding: 0.3rem;
+	background-color: rgba(0, 139, 139, 0.432);
+	margin: 0.5rem;
+	border-radius: 0.5rem;
 }
 
 .repo:hover {
-    color: rgb(172, 201, 255);
+	color: rgb(172, 201, 255);
 }
