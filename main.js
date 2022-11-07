@@ -1,5 +1,5 @@
-const apiUrl = "https://api.github.com/users";
-console.log(APIURL)
+const apiUrl = "https://api.github.com/users/";
+// console.log(APIURL)
 const form = document.getElementById("form");
 const search = document.getElementById("esearch");
 const main = document.querySelector("main");
@@ -15,14 +15,15 @@ async function getRepos(userName) {
 
 async function getData(user) {
     const response = await fetch(apiUrl + user);
-    const responseData = await resp.json();
+    const responseData = await response.json();
 
     createCard(responseData);
     getRepos(user);
 }
 
 function createCard(user) {
-    const { avatar_url, name, bio, followers, following, public_repos } = user;
+    console.log(user);
+    const { avatar_url, name, bio, followers, following, public_repos, location, login } = user;
     if (user.name !== null) {
         const containerHtml =
             `
@@ -33,16 +34,16 @@ function createCard(user) {
                     <img id="sec-img"  src="${avatar_url}" alt="${name}" class="avatar border-2-yellow">
                     </div>
                     <div class="text-green">
-                        <h1>Mahima</h1>
-                        <h6>@</h6>
-                        <p>Delhi</p>
+                        <h1>${name}</h1>
+                        <h6>@${login}</h6>
+                        <p>${location}</p>
                     </div>
                 </div>
                 <div class="profile-btn"><button type="submit">Visit Profile</button></div>
             </section>
             <section class="sec-container">
                 <div class="sec-about">
-                    <h1>${name}</h1>
+                    <h1>About</h1>
                     <p>${bio}</p>
                 </div>
                 <div class="sec-follow">
@@ -67,11 +68,6 @@ function createCard(user) {
                 </div>
                     
             </section>
-            main.innerHTML = cardHtml;
-    } else {
-        main.innerHTML = "<h1>Result Not Found</h1>";
-    }
-}
         </div>
 `
 
@@ -101,6 +97,7 @@ function addRepostoCrad(repoData) {
 form.addEventListener("submit", function (e) {
     e.preventDefault();
     const userValue = search.value;
+    console.log(userValue);
 
     getData(userValue);
     search.value = "";
