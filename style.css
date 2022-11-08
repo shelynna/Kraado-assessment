@@ -84,6 +84,18 @@ input:focus {
 .text-green {
 	margin: 0.5rem 1rem;
 }
+.text-green h1 {
+	font-size: 1.5rem;
+	text-transform: capitalize;
+}
+.text-green p {
+	font-size: 1.1rem;
+	
+}
+.text-green h6 {
+	font-size: 1.1rem;
+	font-weight: normal;
+}
 
 @media (max-width: 426px) {
 	.container {
@@ -122,14 +134,20 @@ input:focus {
 
 .repo {
 	display: inline-block;
-	color: rgb(211, 210, 208);
+	color: #000000;
 	text-decoration: none;
 	padding: 0.3rem;
-	background-color: rgba(0, 139, 139, 0.432);
+	background-color: #c2c204;
 	margin: 0.5rem;
 	border-radius: 0.5rem;
 }
 
 .repo:hover {
-	color: rgb(172, 201, 255);
+	background-color: rgb(0, 14, 42);
+	color: #f5f5f5;
+}
+.sec-follow p{
+	color: #f5f5f5;
+	font-weight: 600;
+	font-size: larger;
 }

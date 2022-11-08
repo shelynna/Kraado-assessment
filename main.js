@@ -36,7 +36,7 @@ function createCard(user) {
                     <div class="text-green">
                         <h1>${name}</h1>
                         <h6>@${login}</h6>
-                        <p>${location}</p>
+                        <p><i class="fa-regular fa-location-dot"></i>${location}</p>
                     </div>
                 </div>
                 <div class="profile-btn"><a href="https://github.com/${login}">Visit Profile</a></div>
@@ -48,16 +48,16 @@ function createCard(user) {
                 </div>
                 <div class="sec-follow">
                     <div>
-                        <h1>${followers}</h1>
-                        <p>0</p>
+                        <h1>Followers</h1>
+                        <p>${followers}</p>
                     </div>
                     <div>
-                        <h1>${following}</h1>
-                        <p>0</p>
+                        <h1>Following</h1>
+                        <p>${following}</p>
                     </div>
                     <div>
-                        <h1>${public_repos}</h1>
-                        <p>0</p>
+                        <h1>Repos</h1>
+                        <p>${public_repos}</p>
                     </div>
                 </div>
             
@@ -86,7 +86,7 @@ function addRepostoCrad(repoData) {
             const repoEl = document.createElement("a");
             repoEl.classList.add("repo");
             repoEl.href = e.html_url;
-            repoEl.target = "_arshad";
+            repoEl.target = "_shelynna";
             repoEl.innerText = e.name;
             reposEl.appendChild(repoEl);
         });
