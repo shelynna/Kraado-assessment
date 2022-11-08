@@ -8,7 +8,8 @@ async function getRepos(userName) {
     const response = await fetch(apiUrl + userName + "/repos");
     const responseData = await response.json();
     if (responseData.message == "Not Found") {
-        main.innerHTML = "<h1>Not Found.Make sure you search fornthe right username.</h1>";
+        main.innerHTML = "<h1>Username Not Found</h1>";
+        // main.classList.add("not-found");
     }
     addRepostoCrad(responseData);
 }

@@ -116,6 +116,9 @@ input:focus {
 		background-color: #c2c204;
 	}
 }
+.not-found{
+	text-align: center;
+}
 .repos {
 	width: 800px;
 	position: absolute;
